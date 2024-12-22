@@ -1,0 +1,2 @@
+# SpencerBAD
+This is a simple DiscordJS V13 bot I made to mute or kick a list of user Id's at random anytime they join a voice channel in the server. Joining a channel, starting video, sharing screen, etc will take a gamble at their membership within the server. It will also insult them out of a random list of insults and mention them in the channel Id you put in the config area at the top of the `main.js` file.
