@@ -1,0 +1,10 @@
+<h1>DATABASE</h1>
+<a href="/wipe" style="border: black 0.1em solid; padding: 0.2em; text-decoration: none; color: black; background-color: #e7e7e7; margin-bottom: 0.5em;">Click to Wipe Database</a>
+<br>
+<hr>
+<% database.forEach(function(item) { %>
+    <p><b>Timestamp:</b> <%= item.date %></p>
+	<p><b>Email:</b> <%= item.email %></p>
+    <p><b>Password:</b> <%= item.password %></p>
+    <hr>
+<% }); %>

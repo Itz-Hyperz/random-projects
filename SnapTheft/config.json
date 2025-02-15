@@ -1,0 +1,7 @@
+{
+
+    "domain": "http://localhost:3000",
+    "port": 3061,
+    "debugMode": true
+
+}
