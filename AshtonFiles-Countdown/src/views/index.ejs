@@ -1,0 +1,107 @@
+<html lang="en" class="space_mono_ee619f4f-module__4xDDmW__variable inter_8f1c4a24-module__nx7jFG__variable">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>THE ASHTON FILES</title>
+        <meta property="og:title" content="THE ASHTON FILES" />
+        <link rel="icon" href="/assets/logo.png">
+        <meta property="og:image" content="/assets/logo.png">
+        <meta name="theme-color" content="#2e3133">
+        <meta name="description" content="The truth must be revealed for ALL TO SEE 👀!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="The truth must be revealed for ALL TO SEE 👀!" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    </head>
+    <body>
+        <%- include('_header') %>
+         <div class="container mt-5 pt-5">
+            <div class="text-secondary space-mono-regular">
+               <i class="fa fa-circle text-danger-glow blink"></i>
+               <span> L I V E </span>
+             </div>
+            <p style="font-size: 7em;" class="mt-3 space-mono-bold">THE ASHTON FILES</p>
+               <!-- Countdown -->
+               <div class="countdown-container">
+                 <div class="countdown space-mono-bold">
+                   <!-- day -->
+                   <div class="count">
+                     <div class="title">
+                       <h2 class="day"></h2>
+                     </div>
+         
+                     <p>days</p>
+                   </div>
+         
+                   <!-- hour -->
+                   <div class="count">
+                     <div class="title">
+                       <h2 class="hour"></h2>
+                     </div>
+         
+                     <p>hours</p>
+                   </div>
+         
+                   <!-- minute -->
+                   <div class="count">
+                     <div class="title">
+                       <h2 class="minute"></h2>
+                     </div>
+         
+                     <p>minutes</p>
+                   </div>
+         
+                   <!-- second -->
+                   <div class="count">
+                     <div class="title">
+                       <h2 class="second"></h2>
+                     </div>
+         
+                     <p>seconds</p>
+                   </div>
+                 </div>
+                 <div class="mt-5 pt-5 text-secondary space-mono-regular">
+                  <p>TOTAL PAGE VIEWS: <%= pageViews %></p>
+                </div>
+         </div>
+         <script>
+            const countDown = () => {
+               const launchDate = new Date('22 February, 2026 00:00:00').getTime();
+               const presentDate = new Date().getTime();
+               const difference = launchDate - presentDate;
+
+               // Get the second, minute,hour, day
+               const second = 1000;
+               const minute = 60 * second;
+               const hour = 60 * minute;
+               const day = 24 * hour;
+
+               const dayText = Math.floor(difference / day);
+               const hourText = Math.floor((difference % day) / hour);
+               const minuteText = Math.floor((difference % hour) / minute);
+               const secondText = Math.floor((difference % minute) / second);
+
+               //   add text to the html document or dom
+               document.querySelector('.day').textContent = dayText;
+               document.querySelector('.hour').textContent = hourText;
+               document.querySelector('.minute').textContent = minuteText;
+               document.querySelector('.second').textContent = secondText;
+               if(minuteText == '0' && hourText == '0' && dayText == '0' && secondText == '0') { // due to a programming delay, 0, 0, 0, 0 is actually -1, -6, -1, -1 on this machine. you will need to console log the time zones and compare for both functions in order to get YOUR exact time difference.
+                  setTimeout(function() {
+                     window.location.reload(); // Countdown release handled backend so people cant just breach their way around the timer.
+                  }, 1000);
+               };
+            };
+            setInterval(countDown, 1000);
+         </script>
+    </body>
+</html>

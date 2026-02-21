@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap');
+
+html, body {
+    overflow-x: hidden !important;
+}
+
+:root {
+    --grayish-blue: #737374;
+    --soft-red: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
+    --dark-desaturated-blue: hsl(0, 100%, 50%);
+    --very-dark-blue: hsl(318, 100%, 50%);
+    --darker-blue: #2e3133;
+  }
+
+  .evidenceImage {
+    height: auto;
+    width: 15em;
+    padding: 2em;
+  }
+
+  .custom-container {
+    text-align: center;
+    padding-inline: 1rem;
+    max-width: 1440px;
+  }
+  
+  .countdown-container h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+  }
+  
+  .countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .countdown .title {
+    position: relative;
+    background-color: #2e3133;
+    border-radius: 0.3rem;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.3rem;
+    width: 2em;
+    height: 2em;
+  }
+  
+  .countdown .title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .countdown .title h2 {
+    color: var(--soft-red);
+    font-size: 1.7rem;
+    line-height: 70px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .countdown .title h2::before {
+    content: '';
+    position: absolute;
+    top: 43%;
+    left: -5px;
+    width: 9px;
+    height: 9px;
+    background-color: var(--darker-blue);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .countdown .title h2::after {
+    content: '';
+    position: absolute;
+    top: 43%;
+    right: -5px;
+    width: 9px;
+    height: 9px;
+    background-color: var(--darker-blue);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .countdown .count:not(:last-child) {
+    margin-right: 1rem;
+  }
+  
+  .countdown .count p {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    color: var(--grayish-blue);
+  }
+
+body {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-color: #1F1E1E;
+    width: 100%;
+    height:100%;
+    margin: auto;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.THEFILES {
+    filter: blur(5em) !important
+}
+
+.text-danger-glow {
+    color: #ff4141;
+    text-shadow: 0 0 20px #f00, 0 0 30px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 60px #f00, 0 0 70px #f00, 0 0 80px #f00;
+  }
+  .text-success-glow {
+    color: #41ff6a;
+    text-shadow: 0 0 20px rgb(0, 255, 98), 0 0 30px rgb(0, 255, 98), 0 0 40px rgb(0, 255, 98), 0 0 50px rgb(0, 255, 98), 0 0 60px rgb(0, 255, 98), 0 0 70px rgb(0, 255, 98), 0 0 80px rgb(0, 255, 98);
+  }
+  
+  .blink {
+    animation: blinker 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+  }
+  @keyframes blinker {  
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 1em;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 1s
+}
+
+a:hover {
+    color: rgb(0, 162, 255);
+}
+
+.exo {
+    font-family: 'Exo', sans-serif !important;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.sourcecodepro {
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+.worksans {
+    font-family: 'Work Sans', sans-serif !important;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    background: rgba(255, 0, 0, 0);
+    /* background-color: transparent; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.075);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(136, 136, 136, 0.445);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(136, 136, 136, 0.445);
+}
+
+@media only screen and (max-width: 540px) {
+    /* For mobile view */
+}
+
+/* Media query */
+@media (min-width: 768px) {
+    .countdown .title {
+      width: 13em;
+      height: 13em;
+    }
+  
+    .countdown .title h2 {
+      line-height: 1.8em;
+      font-size: 7rem;
+    }
+  
+    .countdown .count:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
